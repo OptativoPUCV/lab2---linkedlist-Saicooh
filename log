@@ -38,3 +38,9 @@ list.c:36:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attri
 list.c:36:13: error: expected expression before ‘->’ token
 Compilation failed
 756fabe
+Tue 21 Mar 2023 03:57:26 PM UTC: 
+ list.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+ tests:  1|5
+total_score: 10/70
+6a7f823
