@@ -8,3 +8,14 @@ Tue 21 Mar 2023 03:41:40 PM UTC:
  tests:  0|6
 total_score: 0/70
 607bb08
+Tue 21 Mar 2023 03:52:42 PM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:34:3: error: ‘new’ undeclared (first use in this function)
+   34 |   new -> data = NULL;
+      |   ^~~
+list.c:34:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+9b74e68
