@@ -31,9 +31,9 @@ Node * createNode(void *data)
 
 List * createList()
 {
-  new -> data = NULL;
-  new -> prev = NULL;
-  new -> next = NULL;
+  List List -> data = NULL;
+  List List -> prev = NULL;
+  List List -> next = NULL;
   return NULL;
 }
 

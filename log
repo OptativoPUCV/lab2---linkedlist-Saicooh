@@ -19,3 +19,22 @@ list.c:34:3: error: ‘new’ undeclared (first use in this function)
 list.c:34:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 9b74e68
+Tue 21 Mar 2023 03:53:30 PM UTC: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:34:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   34 |   List List -> data = NULL;
+      |             ^~
+list.c:34:13: error: expected expression before ‘->’ token
+list.c:35:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   35 |   List List -> prev = NULL;
+      |             ^~
+list.c:35:13: error: expected expression before ‘->’ token
+list.c:36:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   36 |   List List -> next = NULL;
+      |             ^~
+list.c:36:13: error: expected expression before ‘->’ token
+Compilation failed
+756fabe
