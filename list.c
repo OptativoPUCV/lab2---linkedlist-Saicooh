@@ -61,7 +61,6 @@ void * lastList(List * list)
   while (list -> current -> next != NULL) list -> current = list -> current -> next;
   list -> current = list -> tail;
   return list -> tail -> data;
-  return NULL;
 }
 
 void * prevList(List * list) 
