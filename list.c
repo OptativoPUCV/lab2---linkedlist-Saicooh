@@ -69,7 +69,7 @@ void * prevList(List * list)
   
   list -> current = list -> current -> prev;
   
-  if (list -> current -> prev == NULL) return NULL;
+  if (list -> current == NULL) return NULL;
   
   return list -> current-> data;
 }
