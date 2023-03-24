@@ -149,6 +149,11 @@ void *popCurrent(List *list)
     list -> current -> next -> prev = NULL;
     list -> head = list -> current -> next;
   }
+  else if (list -> tail == list -> current)
+  {
+    list -> current -> prev -> next = NULL;
+    list -> tail = list -> current -> prev;
+  }
   
   return aux;
 }
