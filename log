@@ -186,3 +186,13 @@ Fri 24 Mar 2023 12:25:36 AM UTC:
  tests:  10|2
 total_score: 45/70
 28a9ab1
+Fri 24 Mar 2023 12:27:51 AM UTC: 
+ list.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:111:19: error: ‘Node’ has no member named ‘head’
+  111 |   list -> current -> head = nuevoDato;
+      |                   ^~
+Compilation failed
+f0f414e

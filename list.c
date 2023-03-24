@@ -108,6 +108,7 @@ void pushCurrent(List * list, void * data)
   }
 
   list -> current -> next = nuevoDato;
+  list -> current -> head = nuevoDato;
   
 }
 
