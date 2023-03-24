@@ -110,7 +110,7 @@ void pushCurrent(List *list, void *data)
   }
   else
   {
-    list -> head = nuevoDato;
+    list -> head -> next = nuevoDato;
     list -> current -> next = nuevoDato;
   }
   
