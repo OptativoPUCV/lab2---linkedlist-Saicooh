@@ -150,6 +150,7 @@ void *popCurrent(List *list)
     list -> head = list -> current -> next;
   }
   
+  return aux;
 }
 
 void cleanList(List *list) 
