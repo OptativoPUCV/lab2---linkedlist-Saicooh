@@ -140,7 +140,7 @@ void *popBack(List *list)
 void *popCurrent(List *list) 
 {
 
-  if (list -> head == NULL) return;
+  if (list -> head == NULL) return NULL;
   
   void *aux = list -> current -> data;
 
