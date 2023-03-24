@@ -297,3 +297,23 @@ list.c:145:9: error: unused variable ‘aux’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 54316d7
+Fri 24 Mar 2023 02:41:13 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:143:29: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  143 |   if (list -> head == NULL) return;
+      |                             ^~~~~~
+list.c:140:7: note: declared here
+  140 | void *popCurrent(List *list)
+      |       ^~~~~~~~~~
+list.c:149:37: error: statement with no effect [-Werror=unused-value]
+  149 |     list -> current -> next -> prev == NULL;
+      |                                     ^
+list.c:145:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+  145 |   void *aux = list -> current -> data;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+3536068
