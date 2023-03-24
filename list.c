@@ -43,21 +43,21 @@ List *createList()
   return list;
 }
 
-void * firstList(List *list) 
+void *firstList(List *list) 
 {
   if (list -> head == NULL || list == NULL ) return NULL;
   list -> current = list -> head;
     return list -> current -> data;
 }
 
-void * nextList(List *list) 
+void *nextList(List *list) 
 {
   if (list -> current == NULL || list == NULL || list -> current -> next == NULL) return NULL;
   list -> current = list -> current -> next;
   return list -> current -> data;
 }
 
-void * lastList(List *list)
+void *lastList(List *list)
 {
   if (list == NULL || list -> tail == NULL) return NULL;
   while (list -> current -> next != NULL) list -> current = list -> current -> next;
@@ -65,7 +65,7 @@ void * lastList(List *list)
   return list -> tail -> data;
 }
 
-void * prevList(List *list) 
+void *prevList(List *list) 
 {
   if(list -> current == NULL || list -> current -> prev == NULL) return NULL;
   
@@ -146,7 +146,7 @@ void *popCurrent(List *list)
 
   if (list -> head == list -> current)
   {
-    list -> current -> next -> prev == NULL;
+    list -> current -> next -> prev = NULL;
     list -> head = list -> current -> next;
   }
   
