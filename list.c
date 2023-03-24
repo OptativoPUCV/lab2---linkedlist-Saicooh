@@ -120,7 +120,7 @@ void pushCurrent(List *list, void *data)
     
     list -> tail = nuevoDato;
     
-    return NULL;
+    return;
   }
   
   if(list -> current -> next == NULL)
