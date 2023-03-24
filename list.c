@@ -103,50 +103,56 @@ void pushCurrent(List *list, void *data)
 {
   Node *nuevoDato = createNode(data);
 
-  if (list->head == NULL)
+  if (list -> head == NULL)
   {
-    list->head = nuevoDato;
-    list->tail = nuevoDato;
-    
+    list -> head = nuevoDato;
+    list -> tail = nuevoDato;
     return;
   }
-
-    
-  if(list->current->next == NULL)
+  
+  if(list -> current -> next == NULL)
   {
-    nuevoDato->prev = list->current;
-    list->current->next = nuevoDato;
-    list->tail = nuevoDato;
+    nuevoDato -> prev = list -> current;
+    list -> current -> next = nuevoDato;
+    list -> tail = nuevoDato;
   }
   else
   {
     nuevoDato -> prev = list -> current;
     list -> current -> next -> prev = nuevoDato;
-    nuevoDato->next = list->current->next;
-    list->current->next = nuevoDato;
+    nuevoDato -> next = list -> current->next;
+    list -> current -> next = nuevoDato;
   }
-  
-  
 }
 
-void *popFront(List * list) 
+void *popFront(List *list) 
 {
   list->current = list->head;
   return popCurrent(list);
 }
 
-void *popBack(List * list) 
+void *popBack(List *list) 
 {
   list->current = list->tail;
   return popCurrent(list);
 }
 
-void *popCurrent(List * list) 
+void *popCurrent(List *list) 
 {
-    return NULL;
+
+  if (list -> head == NULL) return;
+  
+  void *aux = list -> current -> data;
+
+  if (list -> head == list -> current)
+  {
+    list -> current -> next -> prev == NULL;
+    list -> head = list -> current -> next;
+  }
+    return;
 }
 
-void cleanList(List * list) 
+void cleanList(List *list) 
 {
   while (list->head != NULL) 
   {
